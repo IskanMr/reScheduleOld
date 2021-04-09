@@ -45,7 +45,7 @@ namespace reSchedule
                         string name = User.taskList[i].Nama;
                         User.taskList.RemoveAt(i);
                         Show();
-                        Console.WriteLine(obj + name + " telah dihapus\n");
+                        Console.WriteLine(obj + " " + name + " telah dihapus\n");
                         break;
                     }
                     i++;
