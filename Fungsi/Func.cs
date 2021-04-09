@@ -1,9 +1,5 @@
 ﻿using ConsoleTables;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace reSchedule
 {
@@ -49,7 +45,7 @@ namespace reSchedule
                         string name = User.taskList[i].Nama;
                         User.taskList.RemoveAt(i);
                         Show();
-                        Console.WriteLine("Tugas " + name + " telah dihapus\n");
+                        Console.WriteLine(obj + name + " telah dihapus\n");
                         break;
                     }
                     i++;
@@ -62,10 +58,9 @@ namespace reSchedule
         public static void Show()
         {
             ConsoleTable
-                .From(User.taskList)
-                .Write();
+            .From(User.taskList)
+            .Write();
             Console.WriteLine("\n");
         }
-
     }
 }

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace reSchedule
 {
@@ -16,6 +13,13 @@ namespace reSchedule
             {
                 Console.WriteLine("\t[" + entry.key + "] - " + entry.name);
             }
+        }
+
+        public static void delay(string words)
+        {
+            Console.Clear();
+            Console.WriteLine(words);
+            Thread.Sleep(1000);
         }
     }
 }

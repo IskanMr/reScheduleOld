@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
-namespace reSchedule
+﻿namespace reSchedule
 {
     class UserInt
     {
@@ -13,7 +6,6 @@ namespace reSchedule
         {
             Show.entry(Entries.entries1);
             Opsi.Menu();
-
         }
         public static void Fungsi()
         {

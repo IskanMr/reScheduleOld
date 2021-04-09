@@ -1,5 +1,4 @@
-﻿
-namespace reSchedule
+﻿namespace reSchedule
 {
     class Entry
     {

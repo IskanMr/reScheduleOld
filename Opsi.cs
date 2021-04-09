@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace reSchedule
 {
@@ -22,16 +17,12 @@ namespace reSchedule
                 }
                 else if (op == "0" || op == "exit")
                 {
-                    Console.Clear();
-                    Console.WriteLine("Bye bye~");
-                    Thread.Sleep(1000);
+                    Show.delay("Bye bye~");
                     Environment.Exit(0);
                 }
                 else
                 {
-                    Console.Clear();
-                    Console.WriteLine("Pilihan Salah!");
-                    Thread.Sleep(1000);
+                    Show.delay("Pilihan Salah! ");
                     Program.Main();
                 }
                 if (op == "e")
@@ -65,12 +56,7 @@ namespace reSchedule
                 {
                     Console.Clear();
                     User.showTask();
-                    Console.Write("\nKetik 0 untuk kembali! ");
-                    string p = Console.ReadLine();
-                    if (p == "0")
-                    {
-                        UserInt.Fungsi();
-                    }
+                    UserInt.Fungsi();
                 }
                 else if (op == Entries.entries2[3].key.ToLower() || op == Entries.entries2[3].name.ToLower())
                 {
@@ -79,9 +65,7 @@ namespace reSchedule
                 }
                 else
                 {
-                    Console.Clear();
-                    Console.WriteLine("Pilihan Salah!");
-                    Thread.Sleep(1000);
+                    Show.delay("Pilihan Salah! ");
                     UserInt.Fungsi();
                 }
                 if (op == "e")
