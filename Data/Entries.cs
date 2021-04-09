@@ -8,9 +8,9 @@
         };
 
         public static Entry[] entries2 { get; set; } = new Entry[]{
-            new Entry("Tambahkan " + User.objek,"1"),
-            new Entry("Hapus " + User.objek, "2"),
-            new Entry("Tunjukan Semua " + User.objek, "3"),
+            new Entry("Tambahkan " + User.Objek,"1"),
+            new Entry("Hapus " + User.Objek, "2"),
+            new Entry("Tunjukan Semua " + User.Objek, "3"),
             new Entry("Kembali", "0")
         };
     }

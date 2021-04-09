@@ -17,7 +17,7 @@ namespace reSchedule
                 }
                 else if (op == "0" || op == "exit")
                 {
-                    Show.delay("Bye bye~");
+                    Show.delay("Bye bye " + User.Nama + "~");
                     Environment.Exit(0);
                 }
                 else
@@ -40,28 +40,28 @@ namespace reSchedule
                 Console.Write("\nPilihan anda: ");
                 string op = Console.ReadLine().ToLower();
 
-                if (op == Entries.entries2[0].key.ToLower() || op == Entries.entries2[0].name.ToLower())
+                if (op == Entries.entries2[0].getKey().ToLower() || op == Entries.entries2[0].getName().ToLower())
                 {
                     Console.Clear();
                     User.addTask();
                     UserInt.Fungsi();
                 }
-                else if (op == Entries.entries2[1].key.ToLower() || op == Entries.entries2[1].name.ToLower())
+                else if (op == Entries.entries2[1].getKey().ToLower() || op == Entries.entries2[1].getName().ToLower())
                 {
                     Console.Clear();
                     User.deleteTask();
                     UserInt.Fungsi();
                 }
-                else if (op == Entries.entries2[2].key.ToLower() || op == Entries.entries2[2].name.ToLower())
+                else if (op == Entries.entries2[2].getKey().ToLower() || op == Entries.entries2[2].getName().ToLower())
                 {
                     Console.Clear();
                     User.showTask();
                     UserInt.Fungsi();
                 }
-                else if (op == Entries.entries2[3].key.ToLower() || op == Entries.entries2[3].name.ToLower())
+                else if (op == Entries.entries2[3].getKey().ToLower() || op == Entries.entries2[3].getName().ToLower())
                 {
                     Console.Clear();
-                    Program.Main();
+                    UserInt.Menu();
                 }
                 else
                 {

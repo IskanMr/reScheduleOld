@@ -11,7 +11,7 @@ namespace reSchedule
             Console.WriteLine("Pilihan: ");
             foreach (Entry entry in entries)
             {
-                Console.WriteLine("\t[" + entry.key + "] - " + entry.name);
+                Console.WriteLine("\t[" + entry.getKey() + "] - " + entry.getName());
             }
         }
 

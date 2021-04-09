@@ -8,6 +8,9 @@ namespace reSchedule
         {
             Console.Clear();
             Console.Title = "reSchedule";
+            User user = new User();
+            Console.Write("Nama anda: ");
+            User.Nama = Console.ReadLine();
             UserInt.Menu();
         }
     }

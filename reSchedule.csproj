@@ -64,6 +64,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Entries.cs" />
+    <Compile Include="Model\DefaultOne.cs" />
+    <Compile Include="Model\DefaultTwo.cs" />
     <Compile Include="Model\Entry.cs" />
     <Compile Include="Fungsi\Func.cs" />
     <Compile Include="UserInt.cs" />

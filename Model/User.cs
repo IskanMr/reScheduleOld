@@ -3,10 +3,22 @@ using System.Collections.Generic;
 
 namespace reSchedule
 {
-    class User
+    class User : DefaultOne
     {
+        private static string Name;
         public static List<Tugas> taskList { get; set; } = new List<Tugas>();
-        public static string objek = "Tugas";
+        private static string objek = "Tugas";
+
+        public static string Objek { 
+            get { return objek; } 
+            set { objek = value; } 
+        }
+
+        public static string Nama
+        {
+            get { return Name; }
+            set { Name = value; }
+        }
 
         public static void addTask()
         {
@@ -25,6 +37,11 @@ namespace reSchedule
                 Console.Write("Ketik 0 untuk kembali! ");
                 opt = Console.ReadLine();
             }
+        }
+
+        public override string getName()
+        {
+            return Name;
         }
     }
 }

@@ -1,14 +1,24 @@
 ﻿namespace reSchedule
 {
-    class Entry
+    class Entry : DefaultTwo
     {
-        public string name { get; set; }
-        public string key { get; set; }
+        private string Name { get; set; }
+        private string Key { get; set; }
 
         public Entry(string name, string key)
         {
-            this.name = name;
-            this.key = key;
+            Name = name;
+            Key = key;
+        }
+
+        public string getName()
+        {
+            return Name;
+        }
+
+        public string getKey()
+        {
+            return Key;
         }
     }
 
