@@ -18,7 +18,7 @@ namespace reSchedule
                 }
                 else if (op == "0" || op == "exit")
                 {
-                    Show.delay("Bye bye " + User.Nama + "~");
+                    Show.delay("Bye bye " + User.getName() + "~");
                     Environment.Exit(0);
                 }
                 else

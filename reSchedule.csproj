@@ -68,6 +68,7 @@
     <Compile Include="Model\DefaultTwo.cs" />
     <Compile Include="Model\Entry.cs" />
     <Compile Include="Fungsi\Func.cs" />
+    <Compile Include="Model\Thing.cs" />
     <Compile Include="UserInt.cs" />
     <Compile Include="Fungsi\Show.cs" />
     <Compile Include="Opsi.cs" />

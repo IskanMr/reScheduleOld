@@ -1,9 +1,10 @@
 ﻿namespace reSchedule
 {
-    class Entry : DefaultOne
+    class Entry : DefaultOne, Thing
     {
         private string Name { get; set; }
         private string Key { get; set; }
+        public string Nama { get { return Name; } set { Name = value; } }
 
         public Entry(string name, string key)
         {
@@ -11,15 +12,9 @@
             Key = key;
         }
 
-        public override string getName()
-        {
-            return Name;
-        }
+        public override string getName() => Name;
 
-        public string getKey()
-        {
-            return Key;
-        }
+        public string getKey() => Key;
     }
 
 }

@@ -3,31 +3,20 @@ using System.Collections.Generic;
 
 namespace reSchedule
 {
-    class User : DefaultOne
+    public class User :  Thing
     {
-        private static string Name;
+        private static string Name { get; set; }
         public static List<Tugas> taskList { get; set; } = new List<Tugas>();
         private static string objek = "Tugas";
+        public string Nama { get { return Name; } set{ Name = value; } }
 
         public static string Objek { 
             get { return objek; } 
             set { objek = value; } 
         }
 
-        public static string Nama
-        {
-            get { return Name; }
-            set { Name = value; }
-        }
-
-        public static void addTask()
-        {
-            Func.Add(Objek);
-        }
-        public static void deleteTask()
-        {
-            Func.Delete(Objek);
-        }
+        public static void addTask() => Func.Add(Objek);
+        public static void deleteTask() => Func.Delete(Objek);
         public static void showTask()
         {
             string opt = "1";
@@ -39,9 +28,6 @@ namespace reSchedule
             }
         }
 
-        public override string getName()
-        {
-            return Name;
-        }
+        public static string getName() => Name;
     }
 }

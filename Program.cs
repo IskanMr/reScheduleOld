@@ -11,7 +11,7 @@ namespace reSchedule
 
             User user = new User();
             Console.Write("Nama anda: ");
-            User.Nama = Console.ReadLine();
+            user.Nama = Console.ReadLine();
 
             UserInt x = new UserInt();
             x.Menu();
