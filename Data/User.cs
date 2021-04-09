@@ -1,9 +1,6 @@
 ﻿using ConsoleTables;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace reSchedule
 {
@@ -12,20 +9,23 @@ namespace reSchedule
 
         public void Add()
         {
-            string opt;
-            do
+            string opt="1";
+            while(opt!="0")
             {
                 Console.Clear();
+                showList();
+
                 Console.Write("Nama Tugas\t\t: ");
                 string a = Console.ReadLine();
                 Console.Write("Durasi Tugas (Hari) \t: ");
                 int b = Convert.ToInt16(Console.ReadLine());
 
                 myList.taskList.Add(new Tugas(a, b));
+                myList.taskList = ListOrder(myList.taskList);
+
                 Console.WriteLine("\nKetik 0 untuk kembali! ");
                 opt = Console.ReadLine();
-            } while (opt != "0");
-            myList.taskList =  ListOrder(myList.taskList);
+            }
         }
 
         public List<Tugas> ListOrder(List<Tugas> list)
@@ -47,15 +47,30 @@ namespace reSchedule
 
         public void removeTask()
         {
-            string opt;
-            do
+            string opt = "1";
+            while (opt != "0")
             {
+                int i = 0;
                 Console.Clear();
-                Console.WriteLine("Tugas " + myList.taskList[0].Nama + " telah dihapus\n");
-                myList.taskList.RemoveAt(0);
+                showList();
+                Console.WriteLine("Pilih Tugas yang dihapus: ");
+                string ops = Console.ReadLine().ToLowerInvariant();
+                while(true)
+                {
+                        if (ops == myList.taskList[i].Nama.ToLower() || ops == Convert.ToString(i+1))
+                        {
+                            Console.Clear();
+                            string name = myList.taskList[i].Nama;
+                            myList.taskList.RemoveAt(i);
+                            showList();
+                            Console.WriteLine("Tugas " + name + " telah dihapus\n");
+                            break;
+                        }
+                    i++;
+                }
                 Console.Write("Ketik 0 untuk kembali! ");
                 opt = Console.ReadLine();
-            } while (opt != "0");
+            }
         }
 
         public void showList()
@@ -63,6 +78,7 @@ namespace reSchedule
             ConsoleTable
                 .From(myList.taskList)
                 .Write();
+            Console.WriteLine("\n");
         }
 
     }
