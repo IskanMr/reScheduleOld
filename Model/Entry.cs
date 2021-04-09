@@ -1,6 +1,6 @@
 ﻿namespace reSchedule
 {
-    class Entry : DefaultTwo
+    class Entry : DefaultOne
     {
         private string Name { get; set; }
         private string Key { get; set; }
@@ -11,7 +11,7 @@
             Key = key;
         }
 
-        public string getName()
+        public override string getName()
         {
             return Name;
         }

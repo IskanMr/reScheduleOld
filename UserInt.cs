@@ -2,18 +2,20 @@
 
 namespace reSchedule
 {
-    class UserInt
+    public class UserInt : DefaultTwo
     {
-        public static void Menu()
+        public override void Menu()
         {
             Show.entry(Entries.entries1);
-            Opsi.Menu();
+            Opsi y = new Opsi();
+            y.Menu();
         }
 
-        public static void Fungsi()
+        public override void Fungsi()
         {
             Show.entry(Entries.entries2);
-            Opsi.Fungsi();
+            Opsi y = new Opsi();
+            y.Fungsi();
         }
     }
 }

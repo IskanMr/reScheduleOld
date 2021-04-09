@@ -22,11 +22,11 @@ namespace reSchedule
 
         public static void addTask()
         {
-            Func.Add(objek);
+            Func.Add(Objek);
         }
         public static void deleteTask()
         {
-            Func.Delete(objek);
+            Func.Delete(Objek);
         }
         public static void showTask()
         {

@@ -8,9 +8,18 @@ namespace reSchedule
         private int Duration { get; set; }
         private string Deadline{ get;set;}
 
-        public string Nama { get { return Name; } set { Name = value; } }
-        public int Durasi { get { return Duration; } set { Duration = value; } }
-        public string deadline { get { return Deadline; } set { Deadline = value; } }
+        public string Nama { 
+            get { return Name; } 
+            set { Name = value; } 
+        }
+        public int Durasi { 
+            get { return Duration; } 
+            set { Duration = value; } 
+        }
+        public string deadline { 
+            get { return Deadline; } 
+            set { Deadline = value; } 
+        }
 
         public Tugas(string name, int duration)
         {

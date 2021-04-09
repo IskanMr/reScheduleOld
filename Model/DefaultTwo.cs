@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace reSchedule
 {
-    interface DefaultTwo
+    public class DefaultTwo
     {
-        string getName();
+        public virtual void Menu() { }
+        public virtual void Fungsi() { }
     }
 }

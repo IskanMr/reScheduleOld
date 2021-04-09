@@ -2,10 +2,11 @@
 
 namespace reSchedule
 {
-    class Opsi
+    public class Opsi : DefaultTwo
     {
-        public static void Menu()
+        public override void Menu()
         {
+            UserInt x = new UserInt();
             while (true)
             {
                 Console.Write("\nPilihan anda: ");
@@ -13,7 +14,7 @@ namespace reSchedule
 
                 if (op == "1" || op == "menu")
                 {
-                    UserInt.Fungsi();
+                    x.Fungsi();
                 }
                 else if (op == "0" || op == "exit")
                 {
@@ -33,8 +34,9 @@ namespace reSchedule
             }
         }
 
-        public static void Fungsi()
+        public override void Fungsi()
         {
+            UserInt x = new UserInt();
             while (true)
             {
                 Console.Write("\nPilihan anda: ");
@@ -44,29 +46,29 @@ namespace reSchedule
                 {
                     Console.Clear();
                     User.addTask();
-                    UserInt.Fungsi();
+                    x.Fungsi();
                 }
                 else if (op == Entries.entries2[1].getKey().ToLower() || op == Entries.entries2[1].getName().ToLower())
                 {
                     Console.Clear();
                     User.deleteTask();
-                    UserInt.Fungsi();
+                    x.Fungsi();
                 }
                 else if (op == Entries.entries2[2].getKey().ToLower() || op == Entries.entries2[2].getName().ToLower())
                 {
                     Console.Clear();
                     User.showTask();
-                    UserInt.Fungsi();
+                    x.Fungsi();
                 }
                 else if (op == Entries.entries2[3].getKey().ToLower() || op == Entries.entries2[3].getName().ToLower())
                 {
                     Console.Clear();
-                    UserInt.Menu();
+                    x.Menu();
                 }
                 else
                 {
                     Show.delay("Pilihan Salah! ");
-                    UserInt.Fungsi();
+                    x.Fungsi();
                 }
                 if (op == "e")
                 {

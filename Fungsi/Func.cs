@@ -5,7 +5,6 @@ namespace reSchedule
 {
     class Func
     {
-        
         public static void Add(string obj)
         {
             string opt = "1";
