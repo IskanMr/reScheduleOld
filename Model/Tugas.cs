@@ -12,10 +12,10 @@ namespace reSchedule
 
         public Tugas(string name, int duration)
         {
-            this.Nama = name;
-            this.Durasi = duration;
+            Nama = name;
+            Durasi = duration;
             DateTime dt = DateTime.Today.AddDays(duration);
-            this.Deadline = dt.ToShortDateString();
+            Deadline = dt.ToShortDateString();
         }
     }
 }
