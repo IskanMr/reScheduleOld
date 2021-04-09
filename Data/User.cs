@@ -10,22 +10,22 @@ namespace reSchedule
     class User
     {
 
-        public List<Tugas> Add(List<Tugas> list)
+        public void Add()
         {
             string opt;
             do
             {
                 Console.Clear();
-                Console.Write("Nama Tugas\t: ");
+                Console.Write("Nama Tugas\t\t: ");
                 string a = Console.ReadLine();
-                Console.Write("Durasi Tugas\t: ");
+                Console.Write("Durasi Tugas (Hari) \t: ");
                 int b = Convert.ToInt16(Console.ReadLine());
 
-                list.Add(new Tugas(a, b));
-                Console.WriteLine("\nKetik 0 untuk keluar! ");
+                myList.taskList.Add(new Tugas(a, b));
+                Console.WriteLine("\nKetik 0 untuk kembali! ");
                 opt = Console.ReadLine();
             } while (opt != "0");
-            return ListOrder(list);
+            myList.taskList =  ListOrder(myList.taskList);
         }
 
         public List<Tugas> ListOrder(List<Tugas> list)
@@ -34,7 +34,7 @@ namespace reSchedule
                 {
                     for (int j = i + 1; j > 0; j--)
                     {
-                        if (list[j - 1].duration > list[j].duration)
+                        if (list[j - 1].Durasi > list[j].Durasi)
                         {
                             Tugas temp = list[j - 1];
                             list[j - 1] = list[j];
@@ -45,26 +45,24 @@ namespace reSchedule
             return list;
          }
 
-        public List<Tugas> removeTask(List<Tugas> list)
+        public void removeTask()
         {
             string opt;
             do
             {
                 Console.Clear();
-                list.RemoveAt(0);
-                Console.Write("\nKetik 0 untuk keluar! ");
+                Console.WriteLine("Tugas " + myList.taskList[0].Nama + " telah dihapus\n");
+                myList.taskList.RemoveAt(0);
+                Console.Write("Ketik 0 untuk kembali! ");
                 opt = Console.ReadLine();
             } while (opt != "0");
-            return list;
         }
 
-        public void showList(List<Tugas> list)
+        public void showList()
         {
-            foreach (Tugas tugas in list)
-            {
-                Console.WriteLine(tugas.name);
-                Console.WriteLine(tugas.date);
-            }
+            ConsoleTable
+                .From(myList.taskList)
+                .Write();
         }
 
     }

@@ -17,4 +17,5 @@ namespace reSchedule
             this.key = key;
         }
     }
+
 }

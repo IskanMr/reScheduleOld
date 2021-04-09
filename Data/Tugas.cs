@@ -9,17 +9,17 @@ namespace reSchedule
     public class Tugas
     {
 
-        public string name { get; set; }
-        public int duration { get; set; }
+        public string Nama { get; set; }
+        public int Durasi { get; set; }
 
-        public string date{ get;set;}
+        public string Deadline{ get;set;}
 
         public Tugas(string name, int duration)
         {
-            this.name = name;
-            this.duration = duration;
+            this.Nama = name;
+            this.Durasi = duration;
             DateTime dt = DateTime.Today.AddDays(duration);
-            this.date = dt.ToShortDateString();
+            this.Deadline = dt.ToShortDateString();
         }
     }
 }
